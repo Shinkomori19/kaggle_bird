@@ -89,6 +89,8 @@
   * Think about how many digits we need to train
   * Use Attention-based mechanisms
 
+## Code
+https://colab.research.google.com/drive/1KHlZ_S0lL9XDLcTHX6VfPyCHia87I6US?usp=sharing
 
 
 - epoc ごとに評価して、その値が悪くなったときのみ lr を下げるというテクニックがよく使われる。
