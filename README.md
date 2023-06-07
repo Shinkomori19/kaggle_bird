@@ -53,6 +53,16 @@
     2. Check the sum of the loss for every 10 iterations and update the learning rate if the value increases.
     3. Check the sum of the loss value for each epoch and update the learning rate if the value increases. This did not cause much update, so the condition was too strict.
 
+##### Ensemble Learning with ResNet18 + VGG19
+* We defined Decision Tree based architecture by ourselves using scikit-learn and CNN based architecture, but they did not achieve good performance at all, so we shifted to pre-trained models. Each performance was about 2-4% accuracy on a small test set that we prepared
+
+<img width="320" alt="スクリーンショット 2023-06-06 225632" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/1d62b801-768d-4290-8208-bc66c3066c84">
+
+* We tried a technique called “ensemble learning”, where we train independent models and combine them to achieve better performance.
+    1. Single ResNet18 
+     * When trained, it achieved a loss of 1.87 and accuracy of 51%
+    2. Check the sum of the loss for every 10 iterations and update the learning rate if the value increases.
+    3. Check the sum of the loss value for each epoch and update the learning rate if the value increases. This did not cause much update, so the condition was too strict.
 
 ## Problems we encountered
 * We used ResNet 50, since it has more parameters than ResNet 18, which means it is more expressive.
