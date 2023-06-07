@@ -46,7 +46,7 @@
 * We achieved 70% or accuracy, by simply using ResNet 50 architecture.
 
 ##### Auto-tuning of learning rate
-<img width="280" alt="スクリーンショット 2023-06-06 224914" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/fa6641b4-60c1-4764-975b-02d495908bb2">
+<img width="500" alt="スクリーンショット 2023-06-06 224914" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/fa6641b4-60c1-4764-975b-02d495908bb2">
 
 * Since this typical graph of loss value when changing the learning rate looks inefficient, we tried to make the curve smooth. We tried three patterns.
     1. Check the loss value for each iteration and update the learning rate if the value increases. This caused so many updates, and the training became very slow. The condition for updating the learning rate was too easy to meet.
