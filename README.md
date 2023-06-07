@@ -56,7 +56,7 @@
 ##### Ensemble Learning with ResNet18 + VGG19
 * We defined Decision Tree based architecture by ourselves using scikit-learn and CNN based architecture, but they did not achieve good performance at all, so we shifted to pre-trained models. Each performance was about 2-4% accuracy on a small test set that we prepared
 
-<img width="320" alt="スクリーンショット 2023-06-06 225632" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/1d62b801-768d-4290-8208-bc66c3066c84">
+<img width="500" alt="スクリーンショット 2023-06-06 225632" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/1d62b801-768d-4290-8208-bc66c3066c84">
 
 * We tried a technique called “ensemble learning”, where we train independent models and combine them to achieve better performance.
    1. Single ResNet18 
