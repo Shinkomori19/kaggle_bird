@@ -40,12 +40,12 @@
     1. Auto-tuning of learning rate
     2. Fine tuning of pre-trained models
     3. Ensemble learning
-### About Kaggle competition
+##### About Kaggle competition
 * We used ResNet 50, since it has more parameters than ResNet 18, which means it is more expressive. 
 * We did data augmentation to make the training effective.
 * We achieved 70% or accuracy, by simply using ResNet 50 architecture.
 
-### Auto-tuning of learning rate
+##### Auto-tuning of learning rate
 <img width="280" alt="スクリーンショット 2023-06-06 224914" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/fa6641b4-60c1-4764-975b-02d495908bb2">
 
 * Since this typical graph of loss value when changing the learning rate looks inefficient, we tried to make the curve smooth. We tried three patterns.
