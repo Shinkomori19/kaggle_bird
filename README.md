@@ -68,7 +68,8 @@
      
    3. Combined model
      * We combined the two to conduct ensemble analysis. By taking a weighted sum of each predicted probabilities, we predicted the final result as one model. Formula of `argmax(a*(resnet_probabilities) + (1-a)*(vgg_probabilities))` was used. As a result of hyper parameter search of a, we gained 
-
+     
+<img width="500" alt="スクリーンショット 2023-06-06 230859" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/cbdabb73-fda1-4fa4-98a0-dcf6743595b1">
 
 ## Problems we encountered
 * We used ResNet 50, since it has more parameters than ResNet 18, which means it is more expressive.
