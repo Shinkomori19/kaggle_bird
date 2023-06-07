@@ -61,14 +61,10 @@
 * We tried a technique called “ensemble learning”, where we train independent models and combine them to achieve better performance.
     1. Single ResNet18 
      * When trained, it achieved a loss of 1.87 and accuracy of 51%
-
 <img width="314" alt="スクリーンショット 2023-06-06 230030" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/39216fb9-b563-4275-a73f-75b03f5a4e2b">
-
     2. Single VGG19 
      * When trained, it achieved a loss of 3.57 and accuracy of 24%
-     
      <img width="332" alt="スクリーンショット 2023-06-06 230151" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/08adcba4-7d4b-4954-863f-0154d1715cf4">
-
     3. Combined model
      * We combined the two to conduct ensemble analysis. By taking a weighted sum of each predicted probabilities, we predicted the final result as one model. Formula of `argmax(a*(resnet_probabilities) + (1-a)*(vgg_probabilities))` was used. As a result of hyper parameter search of a, we gained 
 
