@@ -1,5 +1,8 @@
 # kaggle_bird
 
+## Link to the Presentation Video
+https://drive.google.com/file/d/1kAeGnhNebdnEv8UPSSWs4PelxLzdR4fI/view?usp=sharing
+
 ## Group members
 * Shin Komori
 * Tatsuhiko Araki
@@ -47,6 +50,7 @@
 
 ##### Auto-tuning of learning rate
 <img width="500" alt="スクリーンショット 2023-06-06 224914" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/fa6641b4-60c1-4764-975b-02d495908bb2">
+<img width="500" alt="スクリーンショット 2023-06-07 0 05 37" src="https://github.com/Shinkomori19/kaggle_bird/assets/92618247/136b770d-094f-47d1-8219-4833f969b3c0">
 
 * Since this typical graph of loss value when changing the learning rate looks inefficient, we tried to make the curve smooth. We tried three patterns.
     1. Check the loss value for each iteration and update the learning rate if the value increases. This caused so many updates, and the training became very slow. The condition for updating the learning rate was too easy to meet.
@@ -60,7 +64,8 @@
 
 * We tried a technique called “ensemble learning”, where we train independent models and combine them to achieve better performance.
    1. Single ResNet18 
-     * When trained, it achieved a loss of 1.87 and accuracy of 51%<img width="500" alt="スクリーンショット 2023-06-06 230030" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/39216fb9-b563-4275-a73f-75b03f5a4e2b">
+     * When trained, it achieved a loss of 1.87 and accuracy of 51%
+     <img width="500" alt="スクリーンショット 2023-06-06 230030" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/39216fb9-b563-4275-a73f-75b03f5a4e2b">
      
    2. Single VGG19 
      * When trained, it achieved a loss of 3.57 and accuracy of 24%
