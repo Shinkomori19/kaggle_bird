@@ -8,6 +8,16 @@
   * Fine tuning of pre-trained models
   * Ensemble learning
 
+# Previous work
+* We used pretrained models, such as;
+  * ResNet 18
+  * ResNet 50
+  * VGG 19
+  * Efficient Net
+* Also, we used PyTorch to keep our code simple. 
+  * Especially, optimizer and loss functions were useful
+* We implemented codes to train, evaluate, and to ensemble prediction.
+
 ## プロジェクト関連のメモ。
 
 - epoc ごとに評価して、その値が悪くなったときのみ lr を下げるというテクニックがよく使われる。
