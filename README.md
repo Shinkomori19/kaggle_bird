@@ -1,10 +1,10 @@
 # kaggle_bird
 
-# Group members
+## Group members
 * Shin Komori
 * Tatsuhiko Araki
 
-# Problem description
+## Problem description
 * We joined the bird Kaggle competition.
   * The problem was to identify which bard is in given pictures from more than 500 species.  
 * Other than submitting to Kaggle competition, we explored various learning techniques that we were interested in. We tried 
@@ -12,7 +12,7 @@
   * Fine tuning of pre-trained models
   * Ensemble learning
 
-# Previous work
+## Previous work
 * We used pretrained models, such as;
   * ResNet 18
   * ResNet 50
@@ -22,30 +22,42 @@
   * Especially, optimizer and loss functions were useful
 * We implemented codes to train, evaluate, and to ensemble prediction.
 
-# Dataset
+## Dataset
 * We used the given dataset of bird
 * We split train data into train data and validation data, so that we can evaluate our model by using validation data.
 * Pre-trained models used ImageNet for pre-training.
 
-# Problems we encountered
+## Problems we encountered
 * Training took much more time than we expected.
   * We were not able to do brute force hyper parameter search or try all possible models because of the limitation of time and computational resources.
 * Using Kaggle was difficult because it was our first time.
   * We did not know how to use notebooks, how to submit results.
 * When we defined models ourselves, it did not achieve good performance, and we gave up defining models ourselves. Pre-trained models achieved better results, which was impressive but we wanted to do better by not using off-the-shelf methods.
 
-# What we did
+## What we did
 1. Submitted to Kaggle competition.
 2. Explored various learning techniques that we were interested in. We tried
     1. Auto-tuning of learning rate
     2. Fine tuning of pre-trained models
     3. Ensemble learning
+### About Kaggle competition
+* We used ResNet 50, since it has more parameters than ResNet 18, which means it is more expressive. 
+* We did data augmentation to make the training effective.
+* We achieved 70% or accuracy, by simply using ResNet 50 architecture.
 
-# Problems we encountered
+### Auto-tuning of learning rate
+<img width="280" alt="スクリーンショット 2023-06-06 224914" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/fa6641b4-60c1-4764-975b-02d495908bb2">
+* Since this typical graph of loss value when changing the learning rate looks inefficient, we tried to make the curve smooth. We tried three patterns.
+    1. Check the loss value for each iteration and update the learning rate if the value increases. This caused so many updates, and the training became very slow. The condition for updating the learning rate was too easy to meet.
+    2. Check the sum of the loss for every 10 iterations and update the learning rate if the value increases.
+    3. Check the sum of the loss value for each epoch and update the learning rate if the value increases. This did not cause much update, so the condition was too strict.
+
+
+## Problems we encountered
 * We used ResNet 50, since it has more parameters than ResNet 18, which means it is more expressive.
 * We did data augmentation
 
-# Next step
+## Next step
 * About auto tuning of learning rate, we can try various patterns to search when is the best time to update the learning rate
   * How do we scale it when updating? (e.g. ½, ⅓, ¼ ?)
   * What should be the condition for updating?
