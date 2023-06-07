@@ -76,10 +76,6 @@ https://drive.google.com/file/d/1kAeGnhNebdnEv8UPSSWs4PelxLzdR4fI/view?usp=shari
      
 <img width="500" alt="スクリーンショット 2023-06-06 230859" src="https://github.com/Shinkomori19/kaggle_bird/assets/104906428/cbdabb73-fda1-4fa4-98a0-dcf6743595b1">
 
-## Problems we encountered
-* We used ResNet 50, since it has more parameters than ResNet 18, which means it is more expressive.
-* We did data augmentation
-
 ## Next step
 * About auto tuning of learning rate, we can try various patterns to search when is the best time to update the learning rate
   * How do we scale it when updating? (e.g. ½, ⅓, ¼ ?)
