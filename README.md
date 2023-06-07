@@ -1,5 +1,12 @@
 # kaggle_bird
 
+# Problem description
+*We joined the bird Kaggle competition.
+ *The problem was to identify which bard is in given pictures from more than 500 species. *Other than submitting to Kaggle competition, we explored various learning techniques that we were interested in. We tried;
+ *Auto-tuning of learning rate
+ *Fine tuning of pre-trained models
+ *Ensemble learning
+
 ## プロジェクト関連のメモ。
 
 - epoc ごとに評価して、その値が悪くなったときのみ lr を下げるというテクニックがよく使われる。
