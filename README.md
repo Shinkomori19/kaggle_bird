@@ -1,5 +1,9 @@
 # kaggle_bird
 
+# Group members
+* Shin Komori
+* Tatsuhiko Araki
+
 # Problem description
 * We joined the bird Kaggle competition.
   * The problem was to identify which bard is in given pictures from more than 500 species.  
@@ -20,6 +24,7 @@
 
 # Dataset
 * We used the given dataset of bird
+* We split train data into train data and validation data, so that we can evaluate our model by using validation data.
 * Pre-trained models used ImageNet for pre-training.
 
 # Problems we encountered
@@ -39,6 +44,21 @@
 # Problems we encountered
 * We used ResNet 50, since it has more parameters than ResNet 18, which means it is more expressive.
 * We did data augmentation
+
+# Next step
+* About auto tuning of learning rate, we can try various patterns to search when is the best time to update the learning rate
+  * How do we scale it when updating? (e.g. ½, ⅓, ¼ ?)
+  * What should be the condition for updating?
+* Improve the accuracy of each model
+  * Further hyper parameter tuning can be done, with more time and computational resources.
+  * We used one model per algorithm (CNN, Decision Tree). Based on the same algorithms, there are multiple possible structures of the models like the number of layers of CNN layers, etc. We can get higher accuracy by exploring those different architectures, even if we use the same algorithm.
+* Increase the number of models that we use.
+  * We used two models this time, but we can expect higher accuracy by combining more than two different models based on different algorithms.
+  * We might be able to get better results by having multiple models based on the same or similar architectures too.
+* Reduce the amount of time it takes to train
+  * Think about how many digits we need to train
+  * Use Attention-based mechanisms
+
 
 
 - epoc ごとに評価して、その値が悪くなったときのみ lr を下げるというテクニックがよく使われる。
